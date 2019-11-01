@@ -8,7 +8,7 @@
 <?php
 
 site_id=(MLA)
-seller_id=(2561899664)
+seller_id=(81644614)
 ACCESS_TOKEN=(APP_USR-538722316634464-090515-8cc4448aac10098706474e135355a8321-8035443)
 for seller_id in ${seller_id[*]}
 do
@@ -22,7 +22,7 @@ $categoria = $curl['category_id'];
 
 include "Log.class.php";
  $log = new Log("log", "./logs/");
- echo $log->insert('id', 'title', 'category_id');
+ echo $log->insert('id:'+$id_sell, 'title:'+$titulo, 'category_id:'+$categoria);
 
 ?>
 </body>
