@@ -8,7 +8,7 @@
 <?php
 
 site_id=(MLA)
-seller_id=(81644614)
+seller_id=(2561899664)
 ACCESS_TOKEN=(APP_USR-538722316634464-090515-8cc4448aac10098706474e135355a8321-8035443)
 for seller_id in ${seller_id[*]}
 do
