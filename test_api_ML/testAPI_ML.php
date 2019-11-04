@@ -16,13 +16,14 @@ curl=$(curl -X GET https://api.mercadolibre.com//sites/$site_id/search?seller_id
 echo "$seller_id: $curl"
 $curl = json_decode($curl,true);
 
-$id_sell = $curl['id'];
-$titulo = $curl['title'];
-$categoria = $curl['category_id'];
-
+     
+$id_sell = $curl->results->id;
+$titulo = $curl->results->title;
+$categoria = $curl->results->category_id;
+$categoria_name = $curl->available_filters->name->values;
 include "Log.class.php";
  $log = new Log("log", "./logs/");
- echo $log->insert('id:'+$id_sell, 'title:'+$titulo, 'category_id:'+$categoria);
+ echo $log->insert('id:'+$id_sell, 'title:'+$titulo, 'category_id:'+$categoria, 'name:'+$categoria_name,);
 
 ?>
 </body>
